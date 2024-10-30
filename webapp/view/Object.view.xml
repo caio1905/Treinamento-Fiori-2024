@@ -1,0 +1,9 @@
+<mvc:View controllerName="acn.btpui5treinamento.controller.Object"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+    <Page>
+        <content>
+
+        </content>
+    </Page>
+</mvc:View>

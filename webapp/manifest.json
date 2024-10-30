@@ -106,6 +106,13 @@
           "target": [
             "TargetWorklist"
           ]
+        },
+        {
+          "name": "RouterObject",
+          "pattern": "Usuario/{CPF}",
+          "target": [
+            "TargetObject"
+          ]
         }
       ],
       "targets": {
@@ -115,6 +122,12 @@
           "clearControlAggregation": false,
           "viewId": "Worklist",
           "viewName": "Worklist"
+        },
+        "TargetObject": {
+          "viewName": "Object",
+          "viewId": "Object",
+          "viewLevel": 2,
+          "title": "Usuário"
         }
       }
     },

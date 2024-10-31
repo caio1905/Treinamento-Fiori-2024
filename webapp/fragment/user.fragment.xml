@@ -1,0 +1,101 @@
+<core:FragmentDefinition
+	xmlns:core="sap.ui.core"
+    controllerName="acn.btpui5treinamento.controller.Worklist"
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+    width="100%">
+	<Dialog showHeader="false">
+		<content>
+			<form:Form editable="true" visible="true" >
+				<form:title>
+					<core:Title text="Teste" level="H2" />
+				</form:title>
+				<form:formContainers >
+					<form:FormContainer visible="true" expandable="true">
+						<form:formElements>
+							<form:FormElement visible="true" >
+								<form:label>
+									<Label text="Teste"/>
+								</form:label>
+								<form:fields>
+									<Input value="{oModelCreate>nome}" width="12rem" />
+								</form:fields>
+							</form:FormElement>
+                            <form:FormElement visible="true" >
+								<form:label>
+									<Label text="Teste"/>
+								</form:label>
+								<form:fields>
+									<Input value="{oModelCreate>nome}" width="12rem" />
+								</form:fields>
+							</form:FormElement>
+                            <form:FormElement visible="true" >
+								<form:label>
+									<Label text="Teste"/>
+								</form:label>
+								<form:fields>
+									<Input value="{oModelCreate>nome}" width="12rem" />
+								</form:fields>
+							</form:FormElement>
+                            <form:FormElement visible="true" >
+								<form:label>
+									<Label text="Teste"/>
+								</form:label>
+								<form:fields>
+									<Input value="{oModelCreate>nome}" width="12rem" />
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+					</form:FormContainer>
+                    <form:FormContainer visible="true" expandable="true">
+						<form:formElements>
+							<form:FormElement visible="true" >
+								<form:label>
+									<Label text="Teste"/>
+								</form:label>
+								<form:fields>
+									<Input value="{oModelCreate>nome}" width="12rem" />
+								</form:fields>
+							</form:FormElement>
+                            <form:FormElement visible="true" >
+								<form:label>
+									<Label text="Teste"/>
+								</form:label>
+								<form:fields>
+									<Input value="{oModelCreate>nome}" width="12rem" />
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+					</form:FormContainer>
+                    <form:FormContainer visible="true" expandable="true">
+						<form:formElements>
+							<form:FormElement visible="true" >
+								<form:label>
+									<Label text="Teste"/>
+								</form:label>
+								<form:fields>
+									<Input value="{oModelCreate>nome}" width="12rem" />
+								</form:fields>
+							</form:FormElement>
+                            <form:FormElement visible="true" >
+								<form:label>
+									<Label text="Teste"/>
+								</form:label>
+								<form:fields>
+									<Input value="{oModelCreate>nome}" width="12rem" />
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+					</form:FormContainer>
+				</form:formContainers>
+				<form:layout>
+					<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" columnsM="1" labelSpanL="4" labelSpanM="2" labelSpanS="12" />
+				</form:layout>
+			</form:Form>
+		</content>
+		<beginButton/>
+		<buttons>
+			<Button text="{i18n>exit}" press=".closeDialog"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

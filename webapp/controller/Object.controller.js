@@ -15,6 +15,7 @@ sap.ui.define([
             onInit: function () {
                 debugger
                 this.setModel(new JSONModel({}), "objectModel")
+                this.setModel(new JSONModel({veiculos : []}), "veiculosModel")
                 this.getRouter().getRoute("RouterObject").attachMatched(this._onObjectMatched, this)
             },
 
@@ -29,6 +30,7 @@ sap.ui.define([
                     success: oData => {
                         debugger
                         this.getModel("objectModel").setData(oData)
+                        this.getModel("veiculosModel").setProperty("/veiculos", oData.veiculos.results)
                     },
                     error: err => {
                         debugger

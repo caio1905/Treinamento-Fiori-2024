@@ -89,6 +89,29 @@ sap.ui.define([
                 this.getRouter().navTo("RouterObject", {
                     CPF: sCPF
                 })
+            },
+
+            openDialog: function(sFragmentName){
+                if(this._oDialog){
+                    this.closeDialog()
+                }
+                var sPath = `acn.btpui5treinamento.fragment.${sFragmentName}`
+                this._oDialog = sap.ui.xmlfragment(this.getView().getId(), sPath, this)
+                this.getView().addDependent(this._oDialog)
+                this._oDialog.setEscapeHandler( function () {
+                    this.closeDialog()
+                }.bind(this))
+                this._oDialog.open()
+            },
+
+            closeDialog: function(){
+                this._oDialog.destroy()
+                this._oDialog= null
+            },
+
+            onCreateUser: function(){
+                this.openDialog('user')
             }
+
         });
     });

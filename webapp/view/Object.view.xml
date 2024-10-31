@@ -1,9 +1,93 @@
 <mvc:View controllerName="acn.btpui5treinamento.controller.Object"
 	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:f="sap.ui.layout.form"
 	xmlns="sap.m">
-    <Page>
-        <content>
-
-        </content>
-    </Page>
+	<Page showHeader="false" showFooter="false" enableScrolling="true">
+		<content>
+			<f:SimpleForm id="SimpleFormDisplay354"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="{objectModel>/nome} - {path: 'objectModel>/cpf', formatter:'.formatter.checkCpf'}"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+				<f:content>
+					<Label text="{i18n>createdAt}" />
+					<Text text="{path:'objectModel>/createdAt', formatter:'.formatter.getFullDate'}" />
+					<Label text="{i18n>createdBy}" />
+					<Text text="{path:'objectModel>/createdBy', formatter:'.formatter.getInfo'}" />
+					<Label text="{i18n>modifiedAt}" />
+					<Text text="{path: 'objectModel>/modifiedAt', formatter:'.formatter.getFullDate'}" />
+					<Label text="{i18n>modifiedBy}" />
+					<Text text="{path:'objectModel>/modifiedBy', formatter:'.formatter.getInfo'}" />
+					<Label text="{i18n>dataNascimento}" />
+					<Text text="{path: 'objectModel>/dataNascimento', formatter: '.formatter.getUserDate'}" />
+					<Label text="{i18n>sexo}" />
+					<Text text="{path:'objectModel>/sexo', formatter:'.formatter.getSexo'}" />
+				</f:content>
+			</f:SimpleForm>
+			<OverflowToolbar >
+				<ToolbarSpacer />
+				<OverflowToolbarButton icon="sap-icon://create" press="onCreateUser" />
+				<OverflowToolbarButton icon="sap-icon://edit" press="onEditUser" />
+				<OverflowToolbarButton icon="sap-icon://delete" press="onDeleteUser" />
+			</OverflowToolbar>
+			<Table 
+					width="auto"
+					growing="false"
+					growingThreshold="20"
+					mode="SingleSelectLeft"
+                    items="{veiculosModel>/veiculos}"
+					>
+				<columns>
+					<Column >
+						<Text text="{i18n>id}"/>
+					</Column>
+					<Column >
+						<Text text="{i18n>name}"/>
+					</Column>
+					<Column >
+						<Text text="{i18n>brand}"/>
+					</Column>
+					<Column >
+						<Text text="{i18n>model}"/>
+					</Column>
+					<Column >
+						<Text text="{i18n>price}"/>
+					</Column>
+					<Column >
+						<Text text="{i18n>currency}"/>
+					</Column>
+					<Column >
+						<Text text="{i18n>createdAt}"/>
+					</Column>
+					<Column >
+						<Text text="{i18n>createdBy}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<Text text="{veiculosModel>id}" />
+						<Text text="{veiculosModel>nome}"/>
+						<Text text="{veiculosModel>marca}"/>
+						<Text text="{veiculosModel>modelo}"/>
+						<Text text="{path: 'veiculosModel>preco', formatter: '.formatter.currencyFormat'}"/>
+						<Text text="{path: 'veiculosModel>moeda', formatter: '.formatter.typeCurrency'}"/>
+						<Text text="{path: 'veiculosModel>createdAt', formatter:'.formatter.getFullDate'}"/>
+						<Text text="{path: 'veiculosModel>createdBy', formatter:'.formatter.getInfo'}"/>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
 </mvc:View>

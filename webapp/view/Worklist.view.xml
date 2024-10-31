@@ -126,14 +126,13 @@
 					<items>
 						<ColumnListItem type="Navigation" press="onCallNextScreen">
 							<Text text="{path: 'cpf', formatter: '.formatter.checkCpf'}"/>
-							<Text text="{createdAt}"/>
+							<Text text="{path: 'createdAt', formatter: '.formatter.getFullDate'}"/>
 							<ObjectStatus text="{path: 'createdBy', formatter:'.formatter.getInfo'}" icon="{path: 'createdBy', formatter: '.formatter.getIcon'}" state="{path: 'createdBy', formatter: '.formatter.getState'}" />
-							<Text text="{modifiedAt}"/>
+							<Text text="{path: 'modifiedAt', formatter:'.formatter.getFullDate'}"/>
 							<ObjectStatus text="{path: 'modifiedBy', formatter:'.formatter.getInfo'}" icon="{path: 'modifiedBy', formatter: '.formatter.getIcon'}" state="{path: 'modifiedBy', formatter: '.formatter.getState'}" />
 							<Text text="{nome}"/>
-							<Text text="{dataNascimento}"/>
+							<Text text="{path: 'dataNascimento', formatter:'.formatter.getUserDate'}"/>
 							<ObjectStatus text="{path: 'sexo', formatter:'.formatter.getSexo'}" icon="{path: 'sexo', formatter: '.formatter.getIconS'}" state="{path: 'sexo', formatter: '.formatter.getStateS'}" />
-							<Text text="{sexo}"/>
 						</ColumnListItem>
 					</items>
 				</Table>

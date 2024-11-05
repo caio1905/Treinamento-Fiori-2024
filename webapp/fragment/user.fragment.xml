@@ -8,81 +8,51 @@
 		<content>
 			<form:Form editable="true" visible="true" >
 				<form:title>
-					<core:Title text="Teste" level="H2" />
+					<core:Title text="{i18n>newUser}" level="H2" />
 				</form:title>
 				<form:formContainers >
 					<form:FormContainer visible="true" expandable="true">
 						<form:formElements>
 							<form:FormElement visible="true" >
 								<form:label>
-									<Label text="Teste"/>
+									<Label text="{i18n>cpf}"/>
 								</form:label>
 								<form:fields>
-									<Input value="{oModelCreate>nome}" width="12rem" />
+									<Input id="cpfIp" required="true" maxLength="14" width="12rem" liveChange=".onCheckCPF" editable="{= ${oControl>/editable} === 'X' ? true : false}" />
 								</form:fields>
 							</form:FormElement>
                             <form:FormElement visible="true" >
 								<form:label>
-									<Label text="Teste"/>
+									<Label text="{i18n>name}"/>
 								</form:label>
 								<form:fields>
-									<Input value="{oModelCreate>nome}" width="12rem" />
-								</form:fields>
-							</form:FormElement>
-                            <form:FormElement visible="true" >
-								<form:label>
-									<Label text="Teste"/>
-								</form:label>
-								<form:fields>
-									<Input value="{oModelCreate>nome}" width="12rem" />
-								</form:fields>
-							</form:FormElement>
-                            <form:FormElement visible="true" >
-								<form:label>
-									<Label text="Teste"/>
-								</form:label>
-								<form:fields>
-									<Input value="{oModelCreate>nome}" width="12rem" />
+									<Input value="{oModelCreate>/nome}" maxLength="80" required="true" width="12rem" />
 								</form:fields>
 							</form:FormElement>
 						</form:formElements>
 					</form:FormContainer>
-                    <form:FormContainer visible="true" expandable="true">
+					<form:FormContainer >
 						<form:formElements>
-							<form:FormElement visible="true" >
+							 <form:FormElement visible="true" >
 								<form:label>
-									<Label text="Teste"/>
+									<Label text="{i18n>dataNascimento}"/>
 								</form:label>
 								<form:fields>
-									<Input value="{oModelCreate>nome}" width="12rem" />
+									<DatePicker id="dtpCreate" displayFormat="dd/MM/yyyy" required="true" class="sapUiSmallMarginBottom" placeholder="{i18n>dateModel}" width="12rem" />
 								</form:fields>
 							</form:FormElement>
                             <form:FormElement visible="true" >
 								<form:label>
-									<Label text="Teste"/>
+									<Label text="{i18n>sexo}"/>
 								</form:label>
 								<form:fields>
-									<Input value="{oModelCreate>nome}" width="12rem" />
-								</form:fields>
-							</form:FormElement>
-						</form:formElements>
-					</form:FormContainer>
-                    <form:FormContainer visible="true" expandable="true">
-						<form:formElements>
-							<form:FormElement visible="true" >
-								<form:label>
-									<Label text="Teste"/>
-								</form:label>
-								<form:fields>
-									<Input value="{oModelCreate>nome}" width="12rem" />
-								</form:fields>
-							</form:FormElement>
-                            <form:FormElement visible="true" >
-								<form:label>
-									<Label text="Teste"/>
-								</form:label>
-								<form:fields>
-									<Input value="{oModelCreate>nome}" width="12rem" />
+									<ComboBox selectedKey="{oModelCreate>/sexo}" required="true" width="12rem">
+										<items>
+											<core:Item key="1" text="{i18n>Masc}"/>
+											<core:Item key="2" text="{i18n>Fem}"/>
+											<core:Item key="3" text="{i18n>Other}"/>
+										</items>
+									</ComboBox>
 								</form:fields>
 							</form:FormElement>
 						</form:formElements>
@@ -95,6 +65,7 @@
 		</content>
 		<beginButton/>
 		<buttons>
+			<Button text="{i18n>ok}" press=".onSaveUser"/>
 			<Button text="{i18n>exit}" press=".closeDialog"/>
 		</buttons>
 	</Dialog>

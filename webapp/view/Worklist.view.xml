@@ -68,6 +68,7 @@
 								</OverflowToolbar>
 							</smartTable:customToolbar>
 				<Table 
+					id="tbUser"
 					width="auto"
 					growing="true"
 					growingThreshold="20"

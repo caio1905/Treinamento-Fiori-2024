@@ -1,0 +1,5 @@
+Utilizando o CAPM que vocês desenvolveram, criem uma aplicação Fiori com 2 navegações para telas do tipo Object, de acordo com as entidades definidas no CAPM.
+Seguindo a regra das aulas, vamos fazer ações de incluir, modificar e deletar os registros pais e filhos, tendo ou não a necessidade de utilizar o "submitChanges".
+A tela principal deverá ter pelo menos 4 filtros diferentes, e será necessário utilizar smartTable como componente principal para exibir os dados na primeira tela.
+
+Pai ama vocês!
